@@ -40,9 +40,9 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void _decrementCounter(){
+  void _decrementCounter() {
     setState(() {
-      if(_counter != 0){
+      if (_counter != 0) {
         _counter--;
       }
     });
@@ -53,14 +53,11 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Center(
-          child: Text(widget.title,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: Colors.black,
-              fontSize: 40
-            ),
-          )
-        ),
+            child: Text(
+          widget.title,
+          textAlign: TextAlign.center,
+          style: const TextStyle(color: Colors.black, fontSize: 40),
+        )),
       ),
       body: Center(
         child: Column(
@@ -68,60 +65,42 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             const Text(
               "Counter",
-              style: TextStyle(
-                color: Colors.yellow,
-                fontSize: 40
-              ),
+              style: TextStyle(color: Colors.yellow, fontSize: 40),
             ),
             Text(
               '$_counter',
-              style: const TextStyle(
-                color: Colors.yellow,
-                fontSize: 40
-              ),
+              style: const TextStyle(color: Colors.yellow, fontSize: 40),
             ),
             Row(
               children: <Widget>[
-                const Padding(
-                    padding: EdgeInsets.fromLTRB(25, 80, 25, 0)
-                ),
+                const Padding(padding: EdgeInsets.fromLTRB(25, 80, 25, 0)),
                 ElevatedButton(
                     onPressed: _incrementCounter,
-                    style:  ElevatedButton.styleFrom(
-                      foregroundColor: Colors.yellow,
-                      backgroundColor: Colors.black,
-                      side: const BorderSide(
-                       width: 1.0,
-                       color: Colors.yellow
-                      )
-                    ),
+                    style: ElevatedButton.styleFrom(
+                        foregroundColor: Colors.yellow,
+                        backgroundColor: Colors.black,
+                        side:
+                            const BorderSide(width: 1.0, color: Colors.yellow)),
                     child: Row(
                       children: const <Widget>[
                         Icon(Icons.plus_one),
                         Text("Increment")
                       ],
-                    )
-                ),
-                const Padding(
-                    padding: EdgeInsets.fromLTRB(25, 80, 25, 0)
-                ),
+                    )),
+                const Padding(padding: EdgeInsets.fromLTRB(25, 80, 25, 0)),
                 ElevatedButton(
                     onPressed: _decrementCounter,
-                    style:  ElevatedButton.styleFrom(
+                    style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.yellow,
                         backgroundColor: Colors.black,
-                        side: const BorderSide(
-                            width: 1.0,
-                            color: Colors.yellow
-                        )
-                    ),
+                        side:
+                            const BorderSide(width: 1.0, color: Colors.yellow)),
                     child: Row(
                       children: const <Widget>[
                         Icon(Icons.exposure_minus_1),
                         Text("Increment")
                       ],
-                    )
-                )
+                    ))
               ],
             )
           ],
